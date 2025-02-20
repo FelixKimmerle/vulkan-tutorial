@@ -13,11 +13,13 @@ class Application
     void main_loop();
     void cleanup();
     void create_instance();
+    void init_physical_dev();
 
     void setupDebugMessenger();
 
     GLFWwindow* window;
     VkInstance instance;
     VkDebugUtilsMessengerEXT debugMessenger;
+    VkPhysicalDevice physicalDevice = VK_NULL_HANDLE;
 
 };
